@@ -8,6 +8,7 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class MagentoTest {
 
@@ -26,7 +27,9 @@ public class MagentoTest {
 		String url="https://magento.com/";
 		
 		WebDriver driver=new ChromeDriver();
+		WebDriver driver1=new FirefoxDriver();
 		driver.manage().window().maximize();
+		driver1.manage().window().maximize();
 		driver.get(url);
 		driver.findElement(By.linkText(myacctlocator)).click();
 		driver.findElement(By.id(emaillocator)).sendKeys("amarmishra382@gmail.com");
